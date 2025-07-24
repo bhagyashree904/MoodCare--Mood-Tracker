@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodCare – Mood Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>MoodCare</h1>
+    <p>Track your daily mood & journal your thoughts</p>
+
+    <div class="mood-section">
+      <h2>Your Mood Today</h2>
+      <div class="moods">
+        <button data-mood="1">😢</button>
+        <button data-mood="2">😐</button>
+        <button data-mood="3">🙂</button>
+        <button data-mood="4">😊</button>
+        <button data-mood="5">😄</button>
+      </div>
+
+      <p id="selectedMood">No mood selected yet.</p>
+      <div class="chart-section">
+      <h2>Mood Progress</h2>
+      <canvas id="moodChart" width="400" height="200"></canvas>
+      </div>
+      
+        <div class="quote-section">
+        <h2>🌟 Daily Motivation</h2>
+        <p id="quoteText" class="quote-text">Loading quote...</p>
+        </div>
+
+
+    </div>
+
+    <div class="journal-section">
+      <h2>Journal Entry</h2>
+      <textarea id="journalEntry" rows="5" placeholder="Write how you feel..."></textarea>
+      <button id="saveBtn">Save Entry</button>
+      <p id="saveMessage"></p>
+      <button onclick="downloadJournal()">📤 Export Journal</button>
+
+    </div>
+
+    <div class="history-section">
+      <h2>Past Entries</h2>
+      <ul id="entriesList"></ul>
+    </div>
+  </div>
+
+  <div class="therapist-section">
+  <h2>Contact a Therapist</h2>
+  <textarea id="therapistMsg" rows="4" placeholder="Write anonymously..."></textarea>
+  <button onclick="sendMessage()">Send</button>
+  <p id="therapistResponse"></p>
+  </div>
+ <!-- <button onclick="logout()">Logout</button> -->
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

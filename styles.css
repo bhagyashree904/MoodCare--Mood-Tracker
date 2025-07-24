@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #dadee6;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: rgb(237, 236, 242);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+h1 { text-align: center; margin-bottom: 20px; }
+p { margin-bottom: 20px; }
+.moods { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+.moods button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.moods button:hover { transform: scale(1.2); }
+#selectedMood { text-align: center; font-size: 18px; margin-bottom: 15px; }
+textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 10px; }
+#saveBtn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #312ab5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#saveBtn:hover { background: #4338ca; }
+#saveMessage { color: green; margin-top: 10px; text-align: center; }
+.history-section { margin-top: 20px; }
+.history-section ul { list-style: none; }
+.history-section li {
+  background: #eef2ff;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.chart-section {
+  margin-top: 30px;
+  background: #fff7ed;
+  padding: 15px;
+  border-radius: 8px;
+}
+.quote-section {
+  margin-top: 30px;
+  background: #ecfdf5;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #10b981;
+}
+.quote-text {
+  font-style: italic;
+  margin-top: 10px;
+  color: #065f46;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .moods {
+    flex-wrap: wrap;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
+
+  #saveBtn {
+    font-size: 14px;
+  }
+}
+.auth-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-btn:hover {
+  background-color: #4338ca;
+}
+
+#authMsg {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+.therapist-section {
+  margin-top: 0px;
+  background: #fef9c3;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.therapist-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.therapist-section button {
+  padding: 10px;
+  background-color: #facc15;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+#therapistResponse {
+  margin-top: 10px;
+  color: #92400e;
+}
